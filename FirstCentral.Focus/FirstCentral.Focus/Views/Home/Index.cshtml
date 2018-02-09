@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+    <div class="row">
+        <div class="form-group">
+            <button id="indexGoBtn" class="btn btn-default btn-lg btn-index">
+                <div class="glyphicon-circle-white">
+                    <span class="glyphicon glyphicon-chevron-right glyphicon-bordered"></span> 
+                </div>
+                <p class="btn-label"><small>Go</small></p>
+            </button>
+            <button id="indexNewBtn" class="btn btn-default btn-lg btn-index">
+                <div class="glyphicon-circle-white">
+                    <span class="glyphicon glyphicon glyphicon-user glyphicon-bordered"></span>
+                </div>
+                <p class="btn-label"><small>New</small></p>
+            </button>
+        </div>
+    </div>
+</div>
+<div id="custSearchArea"></div>
+<div id="custNewArea"></div>
+@section scripts{ 
+    <script type="text/javascript" src="~/Scripts/index.js"></script>
+}

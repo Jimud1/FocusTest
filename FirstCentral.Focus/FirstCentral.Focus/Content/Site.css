@@ -1,0 +1,48 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.glyphicon-circle-white{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid white;
+    color: white;
+    display: inline-table;
+    text-align: center;
+}
+
+.glyphicon-circle-white .glyphicon-bordered{
+    font-size: 20px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.btn-index{
+    background-color: rgba(68,68,68,0.6);
+    color: white;
+}
+
+
+p.btn-label {
+    border-top: 1px solid white;
+    margin-top: 5px;
+}
+
+#custSearchBtn span.btn-label {
+    border-right: 1px solid white;
+    padding-right:5px;
+}
