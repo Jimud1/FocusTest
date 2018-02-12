@@ -4,6 +4,13 @@ namespace FirstCentral.Settings.FocusSettings
 {
     public static class ConnectionStrings
     {
-        public static string DefaultConnectionString { get { return ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString(); } }
+        public static string DefaultConnectionString
+        {
+            get
+            {
+                var defaultConnection = ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString();
+                return defaultConnection;
+            }
+        }
     }
 }

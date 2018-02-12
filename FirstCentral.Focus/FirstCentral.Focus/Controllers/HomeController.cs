@@ -8,15 +8,5 @@ namespace FirstCentral.Focus.Controllers
         {
             return View();
         }
-
-        public ActionResult DisplayCustomerSearch()
-        {
-            return PartialView("_customerSearch");
-        }
-
-        public ActionResult DisplayCustomerAdd()
-        {
-            return PartialView("_customerAdd");
-        }
     }
 }

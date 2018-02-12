@@ -4,6 +4,7 @@ namespace FirstCentral.Models.FocusModels
 {
     public class CustomerModel : IModel
     {
+        public int CustomerId { get; set; }
         public string Title { get; set; }
         public string Forename { get; set; }
         public string Surname { get; set; }

@@ -1,10 +1,11 @@
 ﻿using FirstCentral.Models.FocusModels;
+using System.Collections.Generic;
 
 namespace FirstCentral.Business
 {
     public interface IService<T> where T : IModel
     {
-        T Get();
+        List<T> Get();
         T GetById(int id);
         T Add(T obj);
         T Update(T obj);
