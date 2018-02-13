@@ -23,7 +23,6 @@ namespace FirstCentral.Focus.Controllers
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
-        private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
 
         public AccountController()
@@ -390,6 +389,8 @@ namespace FirstCentral.Focus.Controllers
         {
             get { return Request.GetOwinContext().Authentication; }
         }
+
+        public string LocalLoginProvider { get; private set; }
 
         private IHttpActionResult GetErrorResult(IdentityResult result)
         {

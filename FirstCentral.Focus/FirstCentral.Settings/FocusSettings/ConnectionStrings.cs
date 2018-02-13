@@ -12,5 +12,14 @@ namespace FirstCentral.Settings.FocusSettings
                 return defaultConnection;
             }
         }
+
+        public static string DatafixConnectionString
+        {
+            get
+            {
+                var datafixConnection = ConfigurationManager.ConnectionStrings["DatafixContext"].ToString();
+                return datafixConnection;
+            }
+        }
     }
 }

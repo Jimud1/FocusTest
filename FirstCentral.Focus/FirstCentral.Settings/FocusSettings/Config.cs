@@ -9,5 +9,13 @@
                 return ConnectionStrings.DefaultConnectionString;
             }
         }
+
+        public static string DatafixConnectionString
+        {
+            get
+            {
+                return ConnectionStrings.DatafixConnectionString;
+            }
+        }
     }
 }

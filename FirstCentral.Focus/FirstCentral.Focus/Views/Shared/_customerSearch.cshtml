@@ -5,7 +5,7 @@
             <label for="customerSearchInput"><small>Policy No.</small></label>
             <input class="form-control" type="text" id="customerSearchInput" />
         </div>
-        <button id="custSearchBtn" class="btn btn-default btn-sm btn-index">
+        <button id="custSearchBtn" class="btn btn-default btn-sm btn-index" onclick="module.GetByPolicyKey(event);">
             <span class="btn-label"><small>Search</small></span>
             <div class="glyphicon-circle-white">
                 <span class="glyphicon glyphicon-search glyphicon-bordered"></span>
@@ -13,6 +13,3 @@
         </button>
     </div>
 </div>
-@section scripts{
-    <script type="text/javascript" src="~/Scripts/customerSearch.js"></script>
-}

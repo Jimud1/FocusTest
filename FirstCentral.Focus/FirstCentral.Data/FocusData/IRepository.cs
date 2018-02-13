@@ -3,5 +3,6 @@
     public interface IRepository
     {
         ApplicationDbContext ApplicationDbContext { get; }
+        DatafixContext DatafixContext { get; }
     }
 }
