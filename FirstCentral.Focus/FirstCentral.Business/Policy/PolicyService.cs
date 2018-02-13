@@ -13,9 +13,9 @@ namespace FirstCentral.Business.Policy
     public class PolicyService : IPolicyService
     {
         private readonly IRepository _repository;
-        public PolicyService()
+        public PolicyService(IRepository repository)
         {
-            _repository = new Repository();
+            _repository = repository;
         }
 
         public PolicyModel Add(PolicyModel obj)

@@ -6,7 +6,7 @@ var config = {
             displayCustomerAdd: 'Customer/DisplayCustomerAdd',
         },
         policyRoutes:{
-            getByPolicyKey: '/api/Policy/GetByPolicyKey'
+            getByPolicyKey: 'api/Policy/GetByPolicyKey'
         }
     }
 }

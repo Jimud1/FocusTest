@@ -64,7 +64,7 @@ namespace FirstCentral.Focus.Areas.HelpPage
                 }
             }
 
-            return $"{reflectedParameterDescriptor} was Null";
+            return null;
         }
 
         public string GetResponseDocumentation(HttpActionDescriptor actionDescriptor)

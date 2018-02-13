@@ -20,6 +20,7 @@ namespace FirstCentral.Focus
         {
             // Configure the db context and user manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
+            app.CreatePerOwinContext(DatafixContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
 
             // Enable the application to use a cookie to store information for the signed in user
@@ -41,6 +42,7 @@ namespace FirstCentral.Focus
 
             // Enable the application to use bearer tokens to authenticate users
             app.UseOAuthBearerTokens(OAuthOptions);
+
         }
     }
 }

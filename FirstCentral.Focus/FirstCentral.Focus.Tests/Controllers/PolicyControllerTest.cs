@@ -1,10 +1,10 @@
 ﻿using FirstCentral.Models.FocusModels;
 using FirstCentral.Focus.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FirstCentral.Data.FocusData;
 using System.Web.Http.Results;
 using FirstCentral.Business.Policy;
 using System;
+using FirstCentral.Data.FocusData;
 
 namespace FirstCentral.Focus.Tests.Controllers
 {
@@ -17,7 +17,7 @@ namespace FirstCentral.Focus.Tests.Controllers
         const string StringToTest = "FPM4002807170FC";
         public PolicyControllerTest()
         {
-            _policyController = new PolicyController(new PolicyService());
+            _policyController = new PolicyController(new PolicyService(new Repository()));
         }
 
         [TestMethod]

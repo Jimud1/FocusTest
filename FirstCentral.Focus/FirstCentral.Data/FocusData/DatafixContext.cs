@@ -16,6 +16,11 @@ namespace FirstCentral.Data.FocusData
         {
         }
 
+        public static DatafixContext Create()
+        {
+            return new DatafixContext();
+        }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

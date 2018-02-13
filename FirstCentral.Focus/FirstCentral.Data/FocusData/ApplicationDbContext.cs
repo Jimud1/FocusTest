@@ -8,7 +8,7 @@ namespace FirstCentral.Data.FocusData
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base(Config.DefaultConnectionString, throwIfV1Schema: false)
+            : base(Config.DefaultConnectionString)
         {
         }
 

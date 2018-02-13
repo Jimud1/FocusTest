@@ -51,7 +51,7 @@
     <Compile Include="FocusModels\ContactDetailsModel.cs" />
     <Compile Include="FocusModels\CustomerModel.cs" />
     <Compile Include="FocusModels\EmploymentDetailsModel.cs" />
-    <Compile Include="FocusModels\IModel.cs" />
+    <Compile Include="IModel.cs" />
     <Compile Include="FocusModels\PolicyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
