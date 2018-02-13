@@ -10,6 +10,5 @@ namespace FirstCentral.Business
         T Add(T obj);
         T Update(T obj);
         void Delete(int id);
-        T GetByPolicyNumber(string policyNo);
     }
 }

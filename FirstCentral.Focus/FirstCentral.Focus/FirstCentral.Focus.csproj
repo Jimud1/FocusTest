@@ -338,6 +338,10 @@
       <Project>{265bca56-067f-444a-bbd9-11fb854427d0}</Project>
       <Name>FirstCentral.Settings</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FirstCentral.Util\FirstCentral.Util.csproj">
+      <Project>{1ef7d394-b8b5-4edb-b4b3-99eb201306c8}</Project>
+      <Name>FirstCentral.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

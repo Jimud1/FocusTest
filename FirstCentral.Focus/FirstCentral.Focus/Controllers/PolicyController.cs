@@ -1,31 +1,45 @@
 ﻿using FirstCentral.Business.Policy;
-using FirstCentral.Models.FocusModels;
 using System;
+using System.Data.SqlClient;
 using System.Web.Http;
 
 namespace FirstCentral.Focus.Controllers
 {
+    /// <summary>
+    /// Policy controller for accessing anything policy related
+    /// </summary>
     public class PolicyController : ApiController
     {
         IPolicyService _policyService;
-
-        public PolicyController()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public PolicyController(IPolicyService policyService)
         {
-            //Lazy for now, look into IoC
-            _policyService = new PolicyService();
+            //Lazy for now, IoC in next inception
+            _policyService = policyService;
         }
 
+        /// <summary>
+        /// Search for Policy by PolicyKey E.g. "FPM4002807170FC"
+        /// </summary>
+        /// <param name="policyKey"></param>
+        /// <returns></returns>
         [HttpPost]
-        public PolicyModel GetByPolicyKey([FromBody]string policyKey)
+        public IHttpActionResult GetByPolicyKey([FromBody]string policyKey)
         {
             try
             {
                 var policy = _policyService.GetByPolicyNumber(policyKey);
-                return policy;
+                return Ok(policy);
             }
-            catch(ArgumentNullException ane)
+            catch(ArgumentNullException)
             {
-                throw ane;
+                return NotFound();
+            }
+            catch(SqlException)
+            {
+                return InternalServerError();
             }
         }
     }

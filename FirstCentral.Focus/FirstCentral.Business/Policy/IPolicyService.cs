@@ -3,6 +3,6 @@ namespace FirstCentral.Business.Policy
 {
     public interface IPolicyService : IService<PolicyModel>
     {
-
+        PolicyModel GetByPolicyNumber(string policyNo);
     }
 }

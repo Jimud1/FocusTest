@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using FirstCentral.Models.FocusModels;
 using FirstCentral.Data.FocusData;
 using FirstCentral.Data.Entities.Focus;
+using System.Data.SqlClient;
 
 namespace FirstCentral.Business.Policy
 {
+    /// <summary>
+    /// Main entry point for any use of Policy
+    /// </summary>
     public class PolicyService : IPolicyService
     {
         private readonly IRepository _repository;
@@ -34,15 +38,27 @@ namespace FirstCentral.Business.Policy
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Entry point for where all gets by PolicyKey should be
+        /// </summary>
+        /// <param name="policyKey"></param>
+        /// <returns></returns>
         public PolicyModel GetByPolicyNumber(string policyKey)
         {
             if (string.IsNullOrWhiteSpace(policyKey)) throw new ArgumentNullException("PolicyKey is null");
 
             using (var context = _repository.DatafixContext)
             {
-                var result = context.Datafix_Policy_GET(policyKey);
-                var toReturn = EntityToModel(result);
-                return toReturn;
+                try
+                {
+                    var result = context.GetPolicyByPolicyKey(policyKey);
+                    var toReturn = EntityToModel(result);
+                    return toReturn;
+                }
+                catch (SqlException)
+                {
+                    throw;
+                }
             }
         }
 

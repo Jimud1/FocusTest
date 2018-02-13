@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{265BCA56-067F-444A-BBD9-11FB854427D0}</ProjectGuid>
+    <ProjectGuid>{1EF7D394-B8B5-4EDB-B4B3-99EB201306C8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FirstCentral.Settings</RootNamespace>
-    <AssemblyName>FirstCentral.Settings</AssemblyName>
+    <RootNamespace>FirstCentral.Util</RootNamespace>
+    <AssemblyName>FirstCentral.Util</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,11 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FocusSettings\AppSettings.cs" />
-    <Compile Include="FocusSettings\Config.cs" />
-    <Compile Include="FocusSettings\ConnectionStrings.cs" />
-    <Compile Include="FocusSettings\StoredProcs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirstCentral.Models\FirstCentral.Models.csproj">
+      <Project>{819fde64-afc0-4125-b8be-5073646ab510}</Project>
+      <Name>FirstCentral.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

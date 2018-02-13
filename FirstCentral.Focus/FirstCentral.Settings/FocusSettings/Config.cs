@@ -17,5 +17,12 @@
                 return ConnectionStrings.DatafixConnectionString;
             }
         }
+        public static string GetPolicyByPolicyKey
+        {
+            get
+            {
+                return StoredProcs.GetPolicyByPolicyKey;
+            }
+        }
     }
 }

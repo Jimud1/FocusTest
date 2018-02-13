@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace FirstCentral.Data.FocusData
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class DatafixContext : DbContext
     {
         public DatafixContext()
@@ -18,11 +21,23 @@ namespace FirstCentral.Data.FocusData
         {
         }
 
-        public virtual PolicyEntity Datafix_Policy_GET(string policyKey)
+        /// <summary>
+        /// Calls Stored Procedure named in the config as GET_Policy_ByPolicyKey
+        /// </summary>
+        /// <param name="policyKey"></param>
+        /// <returns></returns>
+        public virtual PolicyEntity GetPolicyByPolicyKey(string policyKey)
         {
-            var policyKeyParam = new SqlParameter("PolicyKey", policyKey);
-            var toReturn = Database.SqlQuery<PolicyEntity>("Datafix_Policy_GET @PolicyKey", policyKeyParam).FirstOrDefault();
-            return toReturn;
+            try
+            {
+                var policyKeyParam = new SqlParameter("@PolicyKey", policyKey);
+                var toReturn = Database.SqlQuery<PolicyEntity>(Config.GetPolicyByPolicyKey, policyKeyParam).FirstOrDefault();
+                return toReturn;
+            }
+            catch(SqlException sql)
+            {
+                throw sql;
+            }
         }
     }
 }
