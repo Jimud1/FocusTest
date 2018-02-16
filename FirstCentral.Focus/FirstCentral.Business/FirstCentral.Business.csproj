@@ -75,6 +75,10 @@
       <Project>{819fde64-afc0-4125-b8be-5073646ab510}</Project>
       <Name>FirstCentral.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FirstCentral.Settings\FirstCentral.Settings.csproj">
+      <Project>{265bca56-067f-444a-bbd9-11fb854427d0}</Project>
+      <Name>FirstCentral.Settings</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

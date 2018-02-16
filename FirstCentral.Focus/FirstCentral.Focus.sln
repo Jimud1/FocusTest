@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstCentral.Settings", "Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstCentral.Util", "FirstCentral.Util\FirstCentral.Util.csproj", "{1EF7D394-B8B5-4EDB-B4B3-99EB201306C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstCentral.Datafix.StoredProcedureHelper", "FirstCentral.Datafix.StoredProcedureHelper\FirstCentral.Datafix.StoredProcedureHelper.csproj", "{09A7521C-CACC-415C-A8C4-A50BE7016F2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1EF7D394-B8B5-4EDB-B4B3-99EB201306C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EF7D394-B8B5-4EDB-B4B3-99EB201306C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EF7D394-B8B5-4EDB-B4B3-99EB201306C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A7521C-CACC-415C-A8C4-A50BE7016F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A7521C-CACC-415C-A8C4-A50BE7016F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A7521C-CACC-415C-A8C4-A50BE7016F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A7521C-CACC-415C-A8C4-A50BE7016F2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

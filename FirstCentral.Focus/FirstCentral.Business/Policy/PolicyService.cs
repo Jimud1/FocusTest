@@ -4,6 +4,7 @@ using FirstCentral.Models.FocusModels;
 using FirstCentral.Data.FocusData;
 using FirstCentral.Data.Entities.Focus;
 using System.Data.SqlClient;
+using FirstCentral.Settings.Enums.Focus;
 
 namespace FirstCentral.Business.Policy
 {
@@ -16,26 +17,6 @@ namespace FirstCentral.Business.Policy
         public PolicyService(IRepository repository)
         {
             _repository = repository;
-        }
-
-        public PolicyModel Add(PolicyModel obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<PolicyModel> Get()
-        {
-            throw new NotImplementedException();
-        }
-
-        public PolicyModel GetById(int id)
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -61,12 +42,17 @@ namespace FirstCentral.Business.Policy
                 }
             }
         }
-
-        public PolicyModel Update(PolicyModel obj)
+        public void PolicyCancellation(bool payment, string workflowId, NoPaymentReason noPaymentReason)
         {
             throw new NotImplementedException();
         }
 
+        #region Helpers
+        /// <summary>
+        /// Turns model into entity
+        /// </summary>
+        /// <param name="model">Policy Model</param>
+        /// <returns></returns>
         private PolicyEntity ModelToEntity(PolicyModel model)
         {
             var entity = new PolicyEntity
@@ -80,6 +66,11 @@ namespace FirstCentral.Business.Policy
             return entity;
         }
 
+        /// <summary>
+        /// Turns entity into model
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         private PolicyModel EntityToModel(PolicyEntity entity)
         {
             var model = new PolicyModel
@@ -93,5 +84,56 @@ namespace FirstCentral.Business.Policy
             };
             return model;
         }
+        #endregion
+
+        #region TODO
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public PolicyModel Add(PolicyModel obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<PolicyModel> Get()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public PolicyModel GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public PolicyModel Update(PolicyModel obj)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

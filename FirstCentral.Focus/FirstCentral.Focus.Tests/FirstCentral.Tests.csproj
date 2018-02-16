@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="Controllers\CustomerControllerTest.cs" />
     <Compile Include="Controllers\PolicyControllerTest.cs" />
+    <Compile Include="KataTest\KataTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
@@ -128,6 +129,10 @@
     <ProjectReference Include="..\FirstCentral.Models\FirstCentral.Models.csproj">
       <Project>{819fde64-afc0-4125-b8be-5073646ab510}</Project>
       <Name>FirstCentral.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirstCentral.Util\FirstCentral.Util.csproj">
+      <Project>{1ef7d394-b8b5-4edb-b4b3-99eb201306c8}</Project>
+      <Name>FirstCentral.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

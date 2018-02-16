@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\Focus\NoPaymentReason.cs" />
     <Compile Include="FocusSettings\AppSettings.cs" />
     <Compile Include="FocusSettings\Config.cs" />
     <Compile Include="FocusSettings\ConnectionStrings.cs" />

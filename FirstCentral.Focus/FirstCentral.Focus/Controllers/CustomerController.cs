@@ -1,13 +1,13 @@
-﻿using System.Web.Mvc;
+﻿using FirstCentral.Models.FocusModels;
+using System.Web.Mvc;
 
 namespace FirstCentral.Focus.Controllers
 {
     public class CustomerController : Controller
     {
-        // GET: Customer
-        public ActionResult Index()
+        public ActionResult Index(PolicyModel policy)
         {
-            return View();
+            return View(policy);
         }
 
         public ActionResult DisplayCustomerSearch()
